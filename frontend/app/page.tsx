@@ -3,8 +3,6 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import io, { Socket } from "socket.io-client";
 
-// URL do servidor de sinalização Socket.io
-const socket = io("https://justcast-backend.onrender.com");
 
 // Configuração dos servidores STUN públicos para negociação de ICE Candidates
 const RTC_CONFIG: RTCConfiguration = {
@@ -198,7 +196,7 @@ export default function Home() {
 
   // Conecta ao servidor de sinalização Socket.io e registra ouvintes globais
   useEffect(() => {
-    const socket: Socket = io(SIGNALING_SERVER_URL, {
+    const socket: Socket = io("https://justcast-backend.onrender.com", {
       transports: ["websocket", "polling"],
     });
     socketRef.current = socket;

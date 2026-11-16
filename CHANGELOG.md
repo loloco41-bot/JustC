@@ -28,4 +28,5 @@ Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
 ### [Corrigido]
 
+- Resolução do erro de compilação TypeScript TS2304 (Cannot find name 'SIGNALING_SERVER_URL') em `frontend/app/page.tsx` substituindo a variável pela URL direta da API no Render (`https://justcast-backend.onrender.com`).
 - Correção de chamada de estado síncrono dentro do hook `useEffect` na leitura do parâmetro `?room=` da URL, adequando o componente às regras do React 19 / ESLint.
