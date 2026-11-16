@@ -20,6 +20,7 @@ Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 - Função "Transmitir Tela" em `frontend/app/page.tsx`: agora gera e transmite a Offer WebRTC via Socket.io após a captura de tela (`getDisplayMedia`) e responde dinamicamente à entrada de novos espectadores na sala.
 - Elemento de `<video>` ajustado para manter áudio mutado no transmissor (evitando microfonia/feedback local) e habilitar reprodução de áudio e controles interativos no espectador.
 - Botões de ação da interface para alternar dinamicamente entre transmitir/parar transmissão e assistir/parar visualização.
+- URL de ligação do Socket.io atualizada de localhost para o servidor de produção no Render.
 
 ### [Removido]
 

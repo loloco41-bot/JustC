@@ -4,7 +4,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import io, { Socket } from "socket.io-client";
 
 // URL do servidor de sinalização Socket.io
-const SIGNALING_SERVER_URL = "http://localhost:3001";
+const socket = io("https://justcast-backend.onrender.com");
 
 // Configuração dos servidores STUN públicos para negociação de ICE Candidates
 const RTC_CONFIG: RTCConfiguration = {
